@@ -1,13 +1,30 @@
 function calculate() {
     
-    var c1Percent, c2Percent, c3Percent, c1ProRat, c2ProRat, c3ProRat;
+    var c1Percent, c2Percent, c3Percent, c1ProRat, c2ProRat, c3ProRat; 
+    var liabLimit = document.proRataCalc.liabLimit.value;
 
-    /*ignore empty datafields/declare them zero
+    if (liabLimit <= 0 || liabLimit == ''){
+        alert("Please enter a valid liability limit");
+    }
     
-    if (){
-
-    } else {
-    */
+    if (document.proRataCalc.clow1.value == ''){
+        document.proRataCalc.clow1.value = 0;
+    }
+    if (document.proRataCalc.clow2.value == ''){
+        document.proRataCalc.clow2.value = 0;
+    }
+    if (document.proRataCalc.clow3.value == ''){
+        document.proRataCalc.clow3.value = 0;
+    }
+    if (document.proRataCalc.clow4.value == ''){
+        document.proRataCalc.clow4.value = 0;
+    }
+    if (document.proRataCalc.clow5.value == ''){
+        document.proRataCalc.clow5.value = 0;
+    }
+    if (document.proRataCalc.clow6.value == ''){
+        document.proRataCalc.clow6.value = 0;
+    }
 
     //determine each claimant's percentage of the full loss
     c1Percent = parseFloat(document.proRataCalc.clow1.value)/(parseFloat(document.proRataCalc.clow1.value) + parseFloat(document.proRataCalc.clow2.value) + parseFloat(document.proRataCalc.clow3.value) + parseFloat(document.proRataCalc.clow4.value) + parseFloat(document.proRataCalc.clow5.value) + parseFloat(document.proRataCalc.clow6.value));
@@ -42,24 +59,6 @@ function calculate() {
     "$" + parseFloat(c5ProRat) + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
     document.proRataCalc.proRata6.value = 
     "$" + parseFloat(c6ProRat) + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
-}
 
 
-
-///////////////////////////////
-// function to dynamically add input fields/claimants
-///////////////////////////////
-function addFields(){
-    var number = document.getElementById("member").value;
-    var container = document.getElementById("container");
-    while (container.hasChildNodes()) {
-        container.removeChild(container.lastChild);
-    }
-    for (i=0;i<number;i++){
-        container.appendChild(document.createTextNode("Member " + (i+1)));
-        var input = document.createElement("input");
-        input.type = "text";
-        container.appendChild(input);
-        container.appendChild(document.createElement("br"));
-    }
 }
