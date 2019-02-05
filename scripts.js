@@ -2,6 +2,13 @@ function calculate() {
     
     var c1Percent, c2Percent, c3Percent, c1ProRat, c2ProRat, c3ProRat;
 
+    /*ignore empty datafields/declare them zero
+    
+    if (){
+
+    } else {
+    */
+
     //determine each claimant's percentage of the full loss
     c1Percent = parseFloat(document.proRataCalc.clow1.value)/(parseFloat(document.proRataCalc.clow1.value) + parseFloat(document.proRataCalc.clow2.value) + parseFloat(document.proRataCalc.clow3.value) + parseFloat(document.proRataCalc.clow4.value) + parseFloat(document.proRataCalc.clow5.value) + parseFloat(document.proRataCalc.clow6.value));
 
@@ -14,7 +21,6 @@ function calculate() {
     c5Percent = parseFloat(document.proRataCalc.clow5.value)/(parseFloat(document.proRataCalc.clow1.value) + parseFloat(document.proRataCalc.clow2.value) + parseFloat(document.proRataCalc.clow3.value) + parseFloat(document.proRataCalc.clow4.value) + parseFloat(document.proRataCalc.clow5.value) + parseFloat(document.proRataCalc.clow6.value));
 
     c6Percent = parseFloat(document.proRataCalc.clow6.value)/(parseFloat(document.proRataCalc.clow1.value) + parseFloat(document.proRataCalc.clow2.value) + parseFloat(document.proRataCalc.clow3.value) + parseFloat(document.proRataCalc.clow4.value) + parseFloat(document.proRataCalc.clow5.value) + parseFloat(document.proRataCalc.clow6.value));
-
 
     //determine pro-rata share of limit for each claimant
     c1ProRat = (c1Percent * parseFloat(document.proRataCalc.liabLimit.value)).toFixed(2);
@@ -37,6 +43,7 @@ function calculate() {
     document.proRataCalc.proRata6.value = 
     "$" + parseFloat(c6ProRat) + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
 }
+
 
 
 ///////////////////////////////
