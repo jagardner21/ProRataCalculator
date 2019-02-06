@@ -10,6 +10,7 @@
     <body>
         <h1>Pro-Rata.io
         </h1>
+        <h5>Enter the insured's liability limit and damages for each claimant to determine their pro-rata amount.</h5>
         <form name = "proRataCalc">
             Limit of Liability: <input type = "number" name = "liabLimit">
             <br>
@@ -36,8 +37,8 @@
             <br>
             <br>
             <input type = "button" id="button1" value = "Calculate" onClick="calculate()">
-            <br>
-            <br>
+            <input type = "button" id="button2" value = "Reset" onClick="location.reload()">
+            <h3>Results:</h3>
             <output name = "proRata1"></output>
             <br>
             <output name = "proRata2"></output>
@@ -59,7 +60,7 @@
             <output name = "proRata10"></output>
             <br>
             <input type = "button" id="button2" value = "Reset" onClick="location.reload()">
-            <!--Add a Reset button-->
+            
         </form>
         <script src="/scripts.js"></script>
         

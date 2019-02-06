@@ -82,10 +82,17 @@ function calculate() {
 
     if(c1Percent == 1){
         document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " + "$" + document.proRataCalc.clow1.value + "  (" + parseFloat((c1Percent * 100).toFixed(2)) + "%)";
-    } else {
+    } else { document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " +
+    "$" + parseFloat(c1ProRat) + "  (" + parseFloat((c1Percent * 100).toFixed(2)) + "%)";        
+    }
+    if(c1Percent == 1 && (document.proRataCalc.clow1.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c1Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c1Percent != 1){
     document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " +
     "$" + parseFloat(c1ProRat) + "  (" + parseFloat((c1Percent * 100).toFixed(2)) + "%)";
     }
+
     if(c2Percent == 1){
         document.proRataCalc.proRata2.value = "Claimant 2 Pro-Rata Amount: " + "$" + document.proRataCalc.clow2.value + "  (" + parseFloat((c2Percent * 100).toFixed(2)) + "%)";
     } else {
@@ -143,24 +150,6 @@ function calculate() {
     ////////////////////need to ensure that if user only enters 1 claimant 
     ////////////////////then the pro-rata amount needs to be damage amount 
     ////////////////////if  damage < limit or limit if damage > limit
-/*
-    document.proRataCalc.proRata3.value = "Claimant 3 Pro-Rata Amount: " +
-    "$" + parseFloat(c3ProRat) + "  (" + parseFloat((c3Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata4.value = "Claimant 4 Pro-Rata Amount: " +
-    "$" + parseFloat(c4ProRat) + "  (" + parseFloat((c4Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata5.value = "Claimant 5 Pro-Rata Amount: " +
-    "$" + parseFloat(c5ProRat) + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata6.value = "Claimant 6 Pro-Rata Amount: " +
-    "$" + parseFloat(c6ProRat) + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata7.value = "Claimant 7 Pro-Rata Amount: " +
-    "$" + parseFloat(c7ProRat) + "  (" + parseFloat((c7Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata8.value = "Claimant 8 Pro-Rata Amount: " +
-    "$" + parseFloat(c8ProRat) + "  (" + parseFloat((c8Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata9.value = "Claimant 9 Pro-Rata Amount: " +
-    "$" + parseFloat(c9ProRat) + "  (" + parseFloat((c9Percent * 100).toFixed(2)) + "%)";
-    document.proRataCalc.proRata10.value = "Claimant 10 Pro-Rata Amount: " +
-    "$" + parseFloat(c10ProRat) + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
-*/
     if (c1ProRat == 0){
         document.proRataCalc.proRata1.value = " ";
     }
@@ -192,5 +181,10 @@ function calculate() {
         document.proRataCalc.proRata10.value = " ";
     }
 
-    //add a "Reset" button
+    //add onclick for calculate button - enter key
+    //basic description for h5
+    //instructions for limit entering "enter liab limit"
+    //instructions for damage entering "enter each clow dmg"
+    //bug fix - single claimant over limits needs to equal limits
+ 
 }
