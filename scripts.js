@@ -99,54 +99,126 @@ function calculate() {
     document.proRataCalc.proRata2.value = "Claimant 2 Pro-Rata Amount: " +
     "$" + parseFloat(c2ProRat) + "  (" + parseFloat((c2Percent * 100).toFixed(2)) + "%)";
     }
+    if(c2Percent == 1 && (document.proRataCalc.clow2.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata2.value = "Claimant 2 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c2Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c2Percent != 1){
+    document.proRataCalc.proRata2.value = "Claimant 2 Pro-Rata Amount: " +
+    "$" + parseFloat(c2ProRat) + "  (" + parseFloat((c2Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c3Percent == 1){
         document.proRataCalc.proRata3.value = "Claimant 3 Pro-Rata Amount: " + "$" + document.proRataCalc.clow3.value + "  (" + parseFloat((c3Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata3.value = "Claimant 3 Pro-Rata Amount: " +
     "$" + parseFloat(c3ProRat) + "  (" + parseFloat((c3Percent * 100).toFixed(2)) + "%)";
     }
+    if(c3Percent == 1 && (document.proRataCalc.clow3.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata3.value = "Claimant 3 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c3Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c3Percent != 1){
+    document.proRataCalc.proRata3.value = "Claimant 3 Pro-Rata Amount: " +
+    "$" + parseFloat(c3ProRat) + "  (" + parseFloat((c3Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c4Percent == 1){
         document.proRataCalc.proRata4.value = "Claimant 4 Pro-Rata Amount: " + "$" + document.proRataCalc.clow4.value + "  (" + parseFloat((c4Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata4.value = "Claimant 4 Pro-Rata Amount: " +
     "$" + parseFloat(c4ProRat) + "  (" + parseFloat((c4Percent * 100).toFixed(2)) + "%)";
     }
+    if(c4Percent == 1 && (document.proRataCalc.clow4.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata4.value = "Claimant 4 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c4Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c4Percent != 1){
+    document.proRataCalc.proRata4.value = "Claimant 4 Pro-Rata Amount: " +
+    "$" + parseFloat(c4ProRat) + "  (" + parseFloat((c4Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c5Percent == 1){
         document.proRataCalc.proRata5.value = "Claimant 5 Pro-Rata Amount: " + "$" + document.proRataCalc.clow5.value + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata5.value = "Claimant 5 Pro-Rata Amount: " +
     "$" + parseFloat(c5ProRat) + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
     }
+    if(c5Percent == 1 && (document.proRataCalc.clow5.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata5.value = "Claimant 5 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c5Percent != 1){
+    document.proRataCalc.proRata5.value = "Claimant 5 Pro-Rata Amount: " +
+    "$" + parseFloat(c5ProRat) + "  (" + parseFloat((c5Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c6Percent == 1){
         document.proRataCalc.proRata6.value = "Claimant 6 Pro-Rata Amount: " + "$" + document.proRataCalc.clow6.value + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata6.value = "Claimant 6 Pro-Rata Amount: " +
     "$" + parseFloat(c6ProRat) + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
     }
+    if(c6Percent == 1 && (document.proRataCalc.clow6.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata6.value = "Claimant 6 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c6Percent != 1){
+    document.proRataCalc.proRata6.value = "Claimant 6 Pro-Rata Amount: " +
+    "$" + parseFloat(c6ProRat) + "  (" + parseFloat((c6Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c7Percent == 1){
         document.proRataCalc.proRata7.value = "Claimant 7 Pro-Rata Amount: " + "$" + document.proRataCalc.clow7.value + "  (" + parseFloat((c7Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata7.value = "Claimant 7 Pro-Rata Amount: " +
     "$" + parseFloat(c7ProRat) + "  (" + parseFloat((c7Percent * 100).toFixed(2)) + "%)";
     }
+    if(c7Percent == 1 && (document.proRataCalc.clow7.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata7.value = "Claimant 7 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c7Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c7Percent != 1){
+    document.proRataCalc.proRata7.value = "Claimant 7 Pro-Rata Amount: " +
+    "$" + parseFloat(c7ProRat) + "  (" + parseFloat((c7Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c8Percent == 1){
         document.proRataCalc.proRata8.value = "Claimant 8 Pro-Rata Amount: " + "$" + document.proRataCalc.clow8.value + "  (" + parseFloat((c8Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata8.value = "Claimant 8 Pro-Rata Amount: " +
     "$" + parseFloat(c8ProRat) + "  (" + parseFloat((c8Percent * 100).toFixed(2)) + "%)";
     }
+    if(c8Percent == 1 && (document.proRataCalc.clow8.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata8.value = "Claimant 8 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c8Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c8Percent != 1){
+    document.proRataCalc.proRata8.value = "Claimant 8 Pro-Rata Amount: " +
+    "$" + parseFloat(c8ProRat) + "  (" + parseFloat((c8Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c9Percent == 1){
         document.proRataCalc.proRata9.value = "Claimant 9 Pro-Rata Amount: " + "$" + document.proRataCalc.clow9.value + "  (" + parseFloat((c9Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata9.value = "Claimant 9 Pro-Rata Amount: " +
     "$" + parseFloat(c9ProRat) + "  (" + parseFloat((c9Percent * 100).toFixed(2)) + "%)";
     }
+    if(c9Percent == 1 && (document.proRataCalc.clow9.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata9.value = "Claimant 9 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c9Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c9Percent != 1){
+    document.proRataCalc.proRata9.value = "Claimant 9 Pro-Rata Amount: " +
+    "$" + parseFloat(c9ProRat) + "  (" + parseFloat((c9Percent * 100).toFixed(2)) + "%)";
+    }
+
     if(c10Percent == 1){
         document.proRataCalc.proRata10.value = "Claimant 10 Pro-Rata Amount: " + "$" + document.proRataCalc.clow10.value + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
     } else {
     document.proRataCalc.proRata10.value = "Claimant 10 Pro-Rata Amount: " +
     "$" + parseFloat(c10ProRat) + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
     }
+    if(c10Percent == 1 && (document.proRataCalc.clow10.value > document.proRataCalc.liabLimit.value)){
+        document.proRataCalc.proRata10.value = "Claimant 10 Pro-Rata Amount: " + "$" + document.proRataCalc.liabLimit.value + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
+    } 
+    if(c10Percent != 1){
+    document.proRataCalc.proRata10.value = "Claimant 10 Pro-Rata Amount: " +
+    "$" + parseFloat(c10ProRat) + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
+    }
+
     ////////////////////need to ensure that if user only enters 1 claimant 
     ////////////////////then the pro-rata amount needs to be damage amount 
     ////////////////////if  damage < limit or limit if damage > limit
@@ -185,6 +257,5 @@ function calculate() {
     //basic description for h5
     //instructions for limit entering "enter liab limit"
     //instructions for damage entering "enter each clow dmg"
-    //bug fix - single claimant over limits needs to equal limits
  
 }
