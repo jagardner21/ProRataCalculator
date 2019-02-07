@@ -1,6 +1,8 @@
 body {
     /*background-color: rgb(230, 230, 230);*/
-    background-image: linear-gradient(to bottom right, rgb(251, 251, 251), rgb(230, 230, 230))
+    background-image: linear-gradient(to bottom right, rgb(251, 251, 251), rgb(230, 230, 230));
+    text-align: center;
+    
 }
 h1 {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -14,11 +16,14 @@ h5 {
     text-align: center;
 }
 form {
+    display: inline-block;
+    border: 10px;
+    border-style: solid;
+    padding: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 20px;
     color: rgb(0, 54, 91);
     text-align: center;
-    border-left: groove;
+
     
 }
 #button1 {
