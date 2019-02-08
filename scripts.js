@@ -80,6 +80,8 @@ function calculate() {
     c9ProRat = (c9Percent * parseFloat(document.proRataCalc.liabLimit.value)).toFixed(2);
     c10ProRat = (c10Percent * parseFloat(document.proRataCalc.liabLimit.value)).toFixed(2);
 
+    //prevent calculator from giving an amount above liability limit if user enters only 1 damage amount
+    //output each claimant's respective pro-rata amount
     if(c1Percent == 1){
         document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " + "$" + document.proRataCalc.clow1.value + "  (" + parseFloat((c1Percent * 100).toFixed(2)) + "%)";
     } else { document.proRataCalc.proRata1.value = "Claimant 1 Pro-Rata Amount: " +
@@ -219,9 +221,6 @@ function calculate() {
     "$" + parseFloat(c10ProRat) + "  (" + parseFloat((c10Percent * 100).toFixed(2)) + "%)";
     }
 
-    ////////////////////need to ensure that if user only enters 1 claimant 
-    ////////////////////then the pro-rata amount needs to be damage amount 
-    ////////////////////if  damage < limit or limit if damage > limit
     if (c1ProRat == 0){
         document.proRataCalc.proRata1.value = " ";
     }
@@ -252,10 +251,5 @@ function calculate() {
     if (c10ProRat == 0){
         document.proRataCalc.proRata10.value = " ";
     }
-
-    //add onclick for calculate button - enter key
-    //basic description for h5
-    //instructions for limit entering "enter liab limit"
-    //instructions for damage entering "enter each clow dmg"
  
 }
